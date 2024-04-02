@@ -14,7 +14,7 @@
 
     <div class="content">
         <div class="container">
-            <p></p>
+            Content Guest
         </div>
     </div>
 @endsection
