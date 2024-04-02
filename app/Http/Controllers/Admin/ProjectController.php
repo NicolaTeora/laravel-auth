@@ -16,7 +16,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = Project::all();
-        return view('admin.dashboard', compact('projects'));
+        return view('admin.index', compact('projects'));
     }
     /**
      * Show the form for creating a new resource.
@@ -47,7 +47,6 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
     }
 
     /**

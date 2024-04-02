@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [GuestDashboardController::class, 'index'])
   ->name('home');
 
+Route::get('/dashboard/index', [ProjectController::class, 'index'])
+  ->name('index');
+
 // # Rotte protette
 Route::middleware('auth')
   ->prefix('/admin')
@@ -27,8 +30,6 @@ Route::middleware('auth')
   ->group(function () {
 
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])
-      ->name('dashboard');
-    Route::get('/dashboard', [ProjectController::class, 'index'])
       ->name('dashboard');
   });
 
