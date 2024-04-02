@@ -22,6 +22,8 @@ Route::get('/', [GuestDashboardController::class, 'index'])
 
 Route::get('/dashboard/index', [ProjectController::class, 'index'])
   ->name('index');
+Route::get('/dashboard/index{project}', [ProjectController::class, 'show'])
+  ->name('show');
 
 // # Rotte protette
 Route::middleware('auth')

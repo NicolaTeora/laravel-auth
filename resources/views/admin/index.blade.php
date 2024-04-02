@@ -15,7 +15,7 @@
                             <th scope="col">ID</th>
                             <th scope="col">Title</th>
                             <th scope="col">description</th>
-                            <th scope="col">thumb</th>
+                            <th scope="col">type</th>
                             <th scope="col">category</th>
                         </tr>
                     </thead>
@@ -25,18 +25,18 @@
                                 <th scope="row">{{ $project->id }}</th>
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->description }}</td>
-                                <td>{{ $project->thumb }}</td>
+                                <td>{{ $project->type }}</td>
                                 <td>{{ $project->category }}</td>
 
                                 <td>
-                                    <a href="#">info</a>
+                                    <a href="{{ route('show', $project->id) }}">info</a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
-            <a class="badge text-bg-primary fs-6" href="{{ route('admin.dashboard') }}">Back Dashboard</a>
         </div>
+        <a class="badge text-bg-primary fs-6" href="{{ route('admin.dashboard') }}">Back Dashboard</a>
     </div>
 @endsection

@@ -19,13 +19,13 @@ class ProjectSeeder extends Seeder
             [
                 'title' => 'Boolando',
                 'description' => 'replica sito di e-commerce',
-                'thumb' => '',
+                'type' => 'Frontend',
                 'category' => 'Html, Css, Js'
             ],
             [
                 'title' => 'Boolflix',
                 'description' => 'replica sito di film/serie streaming',
-                'thumb' => '',
+                'type' => 'Frontend-Backend',
                 'category' => 'Html, Css, Vue'
             ]
         ];
@@ -34,7 +34,7 @@ class ProjectSeeder extends Seeder
             $project = new Project;
             $project->title = $project_data['title'];
             $project->description = $project_data['description'];
-            $project->thumb = $project_data['thumb'];
+            $project->type = $project_data['type'];
             $project->category = $project_data['category'];
             $project->save();
         }
