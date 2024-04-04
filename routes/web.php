@@ -20,10 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [GuestDashboardController::class, 'index'])
   ->name('home');
 
-Route::get('/dashboard/index', [ProjectController::class, 'index'])
-  ->name('index');
-Route::get('/dashboard/index{project}', [ProjectController::class, 'show'])
-  ->name('show');
 
 // # Rotte protette
 Route::middleware('auth')
@@ -33,6 +29,7 @@ Route::middleware('auth')
 
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])
       ->name('dashboard');
+    Route::resource('projects', ProjectController::class);
   });
 
 require __DIR__ . '/auth.php';

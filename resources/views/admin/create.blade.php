@@ -1,0 +1,42 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="container">
+        <h1 class="fs-4 text-secondary my-4">
+            {{ __('Add new project') }}
+        </h1>
+        <form class="row" action="{{ route('admin.projects.store') }}" method="POST">
+            @csrf
+
+            <div class="col-4">
+                <label for="title" class="form-label">Titolo</label>
+                <input type="text" name="title" id="title" class="form-control">
+            </div>
+
+            <div class="col-4">
+                <label for="type" class="form-label">Tipo</label>
+                <select class="form-select" id="type" name="type">
+                    <option value="lunga">Front End</option>
+                    <option value="corta">Back End</option>
+                    <option value="cortissima">Full-stack</option>
+                </select>
+            </div>
+
+            <div class="col-4">
+                <label for="category" class="form-label">Linguaggio</label>
+                <select class="form-select" id="category" name="category">
+                    <option value="lunga">html</option>
+                    <option value="corta">css</option>
+                    <option value="cortissima">vue</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="description" class="form-label">Descrizione</label>
+                <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col-12 my-3">
+                <button class="btn btn-success">salva</button>
+            </div>
+        </form>
+    </div>
+@endsection

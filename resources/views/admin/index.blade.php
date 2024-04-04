@@ -29,7 +29,7 @@
                                 <td>{{ $project->category }}</td>
 
                                 <td>
-                                    <a href="{{ route('show', $project->id) }}">info</a>
+                                    <a href="{{ route('admin.projects.show', $project->id) }}">info</a>
                                 </td>
                             </tr>
                         @endforeach
