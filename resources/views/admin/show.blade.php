@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="btn btn-primary my-3">
-                    <a class="badge text-bg-primary fs-6" href="{{ route('index') }}">Look the projects</a>
+                    <a class="badge text-bg-primary fs-6" href="{{ route('admin.projects.index') }}">Look the projects</a>
                 </div>
             </div>
         </div>

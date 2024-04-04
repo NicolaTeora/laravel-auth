@@ -20,13 +20,13 @@ class ProjectSeeder extends Seeder
                 'title' => 'Boolando',
                 'description' => 'replica sito di e-commerce',
                 'type' => 'Frontend',
-                'category' => 'Html, Css, Js'
+                'category' => 'Html'
             ],
             [
                 'title' => 'Boolflix',
                 'description' => 'replica sito di film/serie streaming',
-                'type' => 'Frontend-Backend',
-                'category' => 'Html, Css, Vue'
+                'type' => 'Full-stack',
+                'category' => 'Vue'
             ]
         ];
 

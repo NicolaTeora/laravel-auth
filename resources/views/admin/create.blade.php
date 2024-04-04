@@ -16,18 +16,18 @@
             <div class="col-4">
                 <label for="type" class="form-label">Tipo</label>
                 <select class="form-select" id="type" name="type">
-                    <option value="lunga">Front End</option>
-                    <option value="corta">Back End</option>
-                    <option value="cortissima">Full-stack</option>
+                    <option value="front-end">Front End</option>
+                    <option value="back-end">Back End</option>
+                    <option value="full-stack">Full-stack</option>
                 </select>
             </div>
 
             <div class="col-4">
                 <label for="category" class="form-label">Linguaggio</label>
                 <select class="form-select" id="category" name="category">
-                    <option value="lunga">html</option>
-                    <option value="corta">css</option>
-                    <option value="cortissima">vue</option>
+                    <option value="html">html</option>
+                    <option value="css">css</option>
+                    <option value="vue">vue</option>
                 </select>
             </div>
             <div class="col">
