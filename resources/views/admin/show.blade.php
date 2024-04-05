@@ -32,7 +32,8 @@
                 </div>
                 {{-- Todo: cancellazione --}}
                 {{-- <div class="btn btn-primary my-3">
-                    <a class="badge text-bg-danger fs-6" href="{{ route('admin.projects.destroy', $project) }}">Delete this
+                    <a class="badge text-decoration-none text-bg-danger fs-6" data-bs-toggle="modal"
+                        data-bs-target="#modal-destroy-{{ $project->id }}" href="{{ route('admin.projects.destroy', $project) }}">Delete this
                         project</a>
                 </div> --}}
             </div>

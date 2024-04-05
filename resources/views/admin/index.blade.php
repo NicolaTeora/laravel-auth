@@ -35,8 +35,7 @@
                                     <a class="badge text-decoration-none text-bg-success fs-6"
                                         href="{{ route('admin.projects.edit', $project->id) }}">edit</a>
                                     <a class="badge text-decoration-none text-bg-danger fs-6" data-bs-toggle="modal"
-                                        data-bs-target="#idModal"
-                                        href="{{ route('admin.projects.destroy', $project->id) }}">delete</a>
+                                        data-bs-target="#modal-destroy-{{ $project->id }}">delete</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -51,4 +50,35 @@
             project</a>
 
     </div>
+@endsection
+
+@section('modal')
+    @foreach ($projects as $project)
+        <div class="modal fade modal-dialog modal-dialog-centered" id="modal-destroy-{{ $project->id }}"
+            data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminare {{ $project['title'] }} ??</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Procedere alla cancellazione del progetto??
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+
+                        {{-- form eliminazione --}}
+                        <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
 @endsection
