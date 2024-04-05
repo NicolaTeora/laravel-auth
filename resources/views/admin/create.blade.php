@@ -38,5 +38,9 @@
                 <button class="btn btn-success">salva</button>
             </div>
         </form>
+        <div class="btn btn-primary my-2">
+            <a class="text-bg-primary text-decoration-none fs-6" href="{{ route('admin.projects.index') }}">Back
+                projects</a>
+        </div>
     </div>
 @endsection
