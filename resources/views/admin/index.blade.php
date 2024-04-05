@@ -34,7 +34,7 @@
                                         href="{{ route('admin.projects.show', $project->id) }}">info</a>
                                     <a class="badge text-decoration-none text-bg-success fs-6"
                                         href="{{ route('admin.projects.edit', $project->id) }}">edit</a>
-                                    <a class="badge text-decoration-none text-bg-danger fs-6" data-bs-toggle="modal"
+                                    <a class="btn badge text-decoration-none text-bg-danger fs-6" data-bs-toggle="modal"
                                         data-bs-target="#modal-destroy-{{ $project->id }}">delete</a>
                                 </td>
                             </tr>
