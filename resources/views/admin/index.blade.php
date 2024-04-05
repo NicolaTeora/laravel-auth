@@ -17,6 +17,7 @@
                             <th scope="col">description</th>
                             <th scope="col">type</th>
                             <th scope="col">category</th>
+                            <th scope="col">option</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,7 +30,13 @@
                                 <td>{{ $project->category }}</td>
 
                                 <td>
-                                    <a href="{{ route('admin.projects.show', $project->id) }}">info</a>
+                                    <a class="badge text-decoration-none text-bg-primary fs-6"
+                                        href="{{ route('admin.projects.show', $project->id) }}">info</a>
+                                    <a class="badge text-decoration-none text-bg-success fs-6"
+                                        href="{{ route('admin.projects.edit', $project->id) }}">edit</a>
+                                    <a class="badge text-decoration-none text-bg-danger fs-6" data-bs-toggle="modal"
+                                        data-bs-target="#idModal"
+                                        href="{{ route('admin.projects.destroy', $project->id) }}">delete</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -38,9 +45,10 @@
             </div>
         </div>
 
-        <a class="badge text-bg-warning fs-6" href="{{ route('admin.dashboard') }}">Back Dashboard</a>
-        <a class="badge text-bg-primary fs-6" href="{{ route('home') }}">Back Home</a>
-        <a class="badge text-bg-success fs-6" href="{{ route('admin.projects.create') }}">Add project</a>
+        <a class="badge text-bg-warning text-decoration-none fs-6" href="{{ route('admin.dashboard') }}">Back Dashboard</a>
+        <a class="badge text-bg-primary text-decoration-none fs-6" href="{{ route('home') }}">Back Home</a>
+        <a class="badge text-bg-success text-decoration-none fs-6" href="{{ route('admin.projects.create') }}">Add
+            project</a>
 
     </div>
 @endsection

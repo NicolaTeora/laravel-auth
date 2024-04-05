@@ -28,8 +28,13 @@
                     </div>
                 </div>
                 <div class="btn btn-primary my-3">
-                    <a class="badge text-bg-primary fs-6" href="{{ route('admin.projects.index') }}">Look the projects</a>
+                    <a class="badge text-bg-primary fs-6" href="{{ route('admin.projects.index') }}">Back the projects</a>
                 </div>
+                {{-- Todo: cancellazione --}}
+                {{-- <div class="btn btn-primary my-3">
+                    <a class="badge text-bg-danger fs-6" href="{{ route('admin.projects.destroy', $project) }}">Delete this
+                        project</a>
+                </div> --}}
             </div>
         </div>
 
