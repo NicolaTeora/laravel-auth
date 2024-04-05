@@ -2,6 +2,15 @@
 
 @section('content')
     <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger my-2">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <h1 class="fs-4 text-secondary my-4">
             {{ __('Add new project') }}
         </h1>

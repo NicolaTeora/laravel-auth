@@ -39,5 +39,6 @@
                 <button class="btn btn-success">Modifica</button>
             </div>
         </form>
+        <a class="btn text-bg-primary text-decoration-none fs-6" href="{{ route('admin.projects.index') }}">Annulla</a>
     </div>
 @endsection
