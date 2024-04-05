@@ -38,7 +38,8 @@
             </div>
         </div>
 
-        <a class="badge text-bg-primary fs-6" href="{{ route('admin.dashboard') }}">Back Dashboard</a>
+        <a class="badge text-bg-warning fs-6" href="{{ route('admin.dashboard') }}">Back Dashboard</a>
+        <a class="badge text-bg-primary fs-6" href="{{ route('home') }}">Back Home</a>
         <a class="badge text-bg-success fs-6" href="{{ route('admin.projects.create') }}">Add project</a>
 
     </div>
